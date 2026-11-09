@@ -1,0 +1,23 @@
+form { display: flex; flex-direction: column; gap: 6px; max-width: 320px; margin: 24px auto; text-align: left; }
+input { padding: 8px; border: 1px solid #999; border-radius: 6px; }
+input.error { border: 2px solid #c62828; }
+.error-message { color: #c62828; }
+.password-row { display: flex; gap: 6px; }
+.password-row input { flex: 1; }
+ 
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  animation: meluncur 0.3s ease-out;
+}
+.toast.sukses { background: #2e7d32; }
+.toast.gagal { background: #c62828; }
+ 
+@keyframes meluncur {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

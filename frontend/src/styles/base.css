@@ -1,0 +1,108 @@
+/* ============================================================================
+   KawanUsaha Design Tokens & Base Styles
+   File: frontend/src/styles/base.css
+   ============================================================================ */
+
+:root {
+  /* Brand Theme Colors */
+  --color-primary: #1F7A6D;        /* Toska Tua KawanUsaha */
+  --color-primary-hover: #165b51;  /* Toska Gelap Hover */
+  --color-primary-light: #e8f3f1;  /* Toska Lembut / Tint */
+  --color-secondary: #F29A4B;      /* Oranye Aksen KawanUsaha */
+  --color-secondary-hover: #dd8638;
+  --color-bg-warm: #FAF7EE;        /* Background hangat kanvas dasbor */
+  --color-card-bg: #FFFFFF;        /* Putih bersih kartu permukaan */
+  --color-card-soft: #FFFDF9;      /* Off-white kartu lembut */
+  --color-border: #E8E2D5;        /* Garis pembatas halus */
+  --color-text-main: #2D3748;      /* Teks utama gelap */
+  --color-text-muted: #718096;     /* Teks sekunder / keterangan */
+  --color-danger: #E53E3E;         /* Merah status kritis / error */
+  --color-warning: #DD6B20;        /* Oranye status menipis / peringatan */
+  --color-success: #38A169;        /* Hijau status aman / sukses */
+
+  /* Aliases design.md */
+  --warna-utama: var(--color-primary);
+  --warna-utama-hover: var(--color-primary-hover);
+  --warna-utama-tint: var(--color-primary-light);
+  --warna-aksen: var(--color-secondary);
+  --warna-latar: var(--color-bg-warm);
+  --warna-permukaan: var(--color-card-bg);
+  --warna-garis: var(--color-border);
+  --warna-teks: var(--color-text-main);
+  --warna-teks-sekunder: var(--color-text-muted);
+
+  /* Layout & Geometry */
+  --sidebar-width: 260px;
+  --header-height: 64px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-dropdown: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* CSS Reset & Body */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg-warm);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Override default boilerplate vite #root container */
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  border: none !important;
+  display: block !important;
+  background-color: var(--color-bg-warm);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Base Headings & Links */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-main);
+  margin-top: 0;
+  font-weight: 600;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+a:hover {
+  color: var(--color-primary-hover);
+}
